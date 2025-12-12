@@ -6,9 +6,23 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Toaster } from "sonner";
+import { useWorkflowStore } from "~/store/workflowSlice";
+import { WorkflowProgress } from "~/components/WorkflowProgress";
 
 import type { Route } from "./+types/root";
 import "./app.css";
+
+// Create a client for react-query
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 1000 * 60 * 5, // 5 minutes
+      gcTime: 1000 * 60 * 10, // 10 minutes
+    },
+  },
+});
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -42,7 +56,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  const { steps, currentStepId, showProgress } = useWorkflowStore();
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      {showProgress && <WorkflowProgress steps={steps} currentStepId={currentStepId} />}
+      <Outlet />
+      <Toaster position="top-right" richColors />
+    </QueryClientProvider>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
