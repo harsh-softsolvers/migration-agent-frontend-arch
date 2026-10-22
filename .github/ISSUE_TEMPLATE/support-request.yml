@@ -1,0 +1,34 @@
+name: "❓ Question / Support Request"
+description: Ask a question or request help with the CRM.
+title: "❓ [SUPPORT] "
+labels:
+  - support
+
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: "🤝 How can we help?"
+      description: Describe your question, issue, or request for assistance.
+      placeholder: |
+        Example:
+        I'm not sure how to configure email notifications for a workflow.
+  - type: input
+    id: module
+    attributes:
+      label: "📍 Module / Area (Optional)"
+      placeholder: Contacts, Leads, Reports, Workflow, etc.
+
+  - type: textarea
+    id: attempted
+    attributes:
+      label: "✅ What have you tried so far? (Optional)"
+      description: Share any steps you've already taken.
+      placeholder: |
+        Example:
+        I reviewed the workflow settings and checked the email configuration.
+  - type: textarea
+    id: additional_details
+    attributes:
+      label: "📎 Additional Details (Optional)"
+      description: Add screenshots, examples, links, or any other helpful information.
