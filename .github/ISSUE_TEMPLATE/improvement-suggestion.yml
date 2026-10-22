@@ -1,0 +1,42 @@
+name: "💡 Improvement / Suggestion"
+description: Suggest an improvement to an existing feature or process.
+title: "💡 [SUGGESTION] "
+labels:
+  - enhancement
+
+body:
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: "🎯 What would you like to improve?"
+      description: Describe the current feature, process, or experience that could be improved.
+      placeholder: |
+        Example:
+        The Contact list view requires multiple clicks to access frequently used actions.
+  - type: textarea
+    id: reason
+    attributes:
+      label: "❓ Why would this improvement be helpful?"
+      description: Explain the challenge, inconvenience, or opportunity for improvement.
+      placeholder: |
+        Example:
+        Users perform these actions many times a day, and the extra clicks slow down their workflow.
+  - type: textarea
+    id: expected_benefit
+    attributes:
+      label: "🎁 Expected Benefit (Optional)"
+      description: How would this improvement help your team or business process?
+      placeholder: |
+        Example:
+        Faster navigation and improved productivity.
+  - type: input
+    id: module
+    attributes:
+      label: "📍 Module / Area (Optional)"
+      placeholder: Contacts, Leads, Reports, Workflow, etc.
+
+  - type: textarea
+    id: additional_details
+    attributes:
+      label: "📎 Additional Details (Optional)"
+      description: Add screenshots, examples, mockups, links, or any other helpful information.
