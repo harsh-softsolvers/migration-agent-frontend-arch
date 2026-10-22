@@ -1,0 +1,42 @@
+name: "✨ Feature Request"
+description: Suggest a new feature or enhancement for the Agiliux.
+title: "✨ [FEATURE] "
+labels:
+  - enhancement
+
+body:
+  - type: textarea
+    id: request
+    attributes:
+      label: "🎯 What would you like to achieve?"
+      description: Describe the feature, enhancement, or business need.
+      placeholder: |
+        Example:
+        I would like sales users to see recent customer activities directly from the Contact record.
+  - type: textarea
+    id: problem
+    attributes:
+      label: "🔍 What problem are you trying to solve?"
+      description: Tell us about the current challenge or limitation.
+      placeholder: |
+        Example:
+        Users need to open multiple screens to view customer activities, which takes extra time.
+  - type: textarea
+    id: benefit
+    attributes:
+      label: "🚀 Expected Benefit (Optional)"
+      description: How would this help your team or business process?
+      placeholder: |
+        Example:
+        Faster customer interactions and reduced navigation between modules.
+  - type: input
+    id: module
+    attributes:
+      label: "📍 Module / Area (Optional)"
+      placeholder: Contacts, Leads, Reports, Workflow, etc.
+
+  - type: textarea
+    id: additional_details
+    attributes:
+      label: "📎 Additional Details (Optional)"
+      description: Add screenshots, examples, mockups, links, or any other helpful information.
