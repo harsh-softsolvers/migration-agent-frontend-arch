@@ -1,0 +1,51 @@
+name: "🐛 Bug Report"
+description: Report something that is not working as expected.
+title: "🐛 [BUG] "
+labels:
+  - bug
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "❌ What happened?"
+      description: Briefly describe the issue you encountered.
+      placeholder: |
+        Example:
+        I was trying to update a Contact record, but the changes were not saved after clicking Save.
+  - type: textarea
+    id: expected
+    attributes:
+      label: "✅ What did you expect to happen?"
+      description: Describe what you expected to happen instead.
+      placeholder: |
+        Example:
+        The Contact record should have been updated successfully.
+  - type: textarea
+    id: steps
+    attributes:
+      label: "🔄 How can we reproduce this issue?"
+      description: Share the steps if you know them.
+      placeholder: |
+        1. Open Contact record
+        2. Edit phone number
+        3. Click Save
+  - type: input
+    id: module
+    attributes:
+      label: "📍 Module / Area (Optional)"
+      description: Which part of the CRM is affected?
+      placeholder: Contacts, Leads, Reports, Workflow, etc.
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: "💼 Business Impact (Optional)"
+      description: How is this affecting your work or process?
+      placeholder: Unable to update customer information.
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: "📎 Screenshots or Additional Details (Optional)"
+      description: Add screenshots, recordings, links, or any other helpful information.
